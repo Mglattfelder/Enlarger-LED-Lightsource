@@ -86,7 +86,6 @@ RGB Keypad enter mode (Press 'B' from default mode)
 #include <Keypad.h>
 #include <Wire.h>
 #include "rgb_lcd.h"
-#include <IRremote.h> // optional if you want IR control
 #include <EEPROM.h>
 #define PIN        6 // Neopixel Pin
 
@@ -106,12 +105,6 @@ int color_def = 0; // Start color fot the LCD -> 1=green or 0=red
 //--------------------------------------------------------------------------------------------------------------------------
 
 //################# DO NOT CHANGE NOTHING FROM HERE ON IF YOU ARE NOT AWARE OF WHAT TO DO ##################################
-
-// optional if you want IR control
-int RECV_PIN = 8;
-IRrecv irrecv(RECV_PIN);
-decode_results results;
-// end IR part
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -228,8 +221,7 @@ void setup(){
  val_b = EEPROM.read(2);
  
  PaintLED(val_r,val_g,val_b,"noshow");
- 
- irrecv.enableIRIn(); // Start the receiver. Optional if you want IR. 
+
 
 Serial.println("EEPROM 0:" + (String)EEPROM.read(0));
 }
