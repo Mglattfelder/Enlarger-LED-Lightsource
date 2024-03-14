@@ -5,7 +5,7 @@ This projects build a LED light source for a photographic enlargers.
 
 All content is free to be used for non-commercial purposes.
 
-Any LED power setting can be used from 16 LED (small 35mm direct light source), 64 LED (normal 35mm/6x6 light source) up to 256-512 LED for LF enlargers.
+Any LED power setting can be used from 16 LED (small 35mm direct light source), 64 LED (normal 35mm/6x6 light source)  to 256-512 or even more LED for LF enlargers.
 The base is the use of the WS2812b LED. Each LED has a power consumption of 60mA (0.06A) keep this in mind when selecting an appropriate 5V power source. 
 The WS2812b LED has following wavelengths: Red: 620-625nm / Green 522-525nm / Blue 465-467nm.
 
